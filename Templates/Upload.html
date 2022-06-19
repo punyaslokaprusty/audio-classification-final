@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--    <img src="/static/Audio sound with harmonic and Percursive sounds.png" alt="Banner">-->
+    <meta charset="UTF-8">
+    <title>Audio Classification by Music Genre using GTZAN dataset </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/default.css') }}">
+</head>
+
+<br>
+<br>
+
+<br>
+<br>
+<body>
+<div class="container">
+  <div class="brand-logo"></div>
+  <div class="brand-title">Music Genre Classifier</div>
+  <div class="inputs">
+    <form action="http://localhost:5000/uploader" method="post" enctype="multipart/form-data">
+
+    <input type="file" name="file" placeholder="audio.wav">
+    <button type="submit" class="btn btn-primary btn-block btn-large">Upload Audio And Predict Genre</button>
+    <div>
+        <p align="justify" style="font-size:9px"> Make sure the audio file is max 30 MB and is a '.wav' format file.<br>
+            Any formats or file sizes beyond the scope of the above mentioned range will throw an Error.<br>
+
+        </p>
+    </div>
+    </form>
+  </div>
+  <a href="https://github.com/punyaslokaprusty">MADE BY Punya Sloka Prusty</a>
+</div>
+
+<div class="footer">
+  <p align="center">
+     LICENSE MIT <br>
+Copyright (c) <2022>THIS PROGRAM IS CREATED BY PUNYA SLOKA PRUSTY. <copyright Punya Sloka Prusty></copyright>
+<br></p>
+<p align="justify">
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+    </p>
+<p align="justify">
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+<br>
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+</p>
+</div>
+</body>
+</html>

@@ -186,7 +186,7 @@ def new_upload_file(filename):
                                                'there is a 10 % chance of misclassification. But another inference can be taken in theory that ' \
                                                'while each music genre is a: distinguished musical form and musical style  ' \
                                                ', in practice these terms are sometimes used interchangeably`.Therefore acousticly ' \
-                                                        'this audio has a '+pred[0]+' genre signature .             ' \
+                                                        'this audio has a <div class=my-result><b>'+pred[0]+'</b></div> genre signature .             ' \
                                                                                                 '____________________________________________________________________________________________________' \
                                                                                                 '____________________________________________________________________________________________________' \
                                                                                                 ' ___________________________________________________________________________________________________' \
@@ -197,8 +197,23 @@ def new_upload_file(filename):
                                                                                                 'THIS PROGRAM IS CREATED BY PUNYA SLOKA PRUSTY. LICENSE MIT\n ' \
                                                                                                 'Copyright (c) <2022> <Punya Sloka Prusty> '
 
+        wrap = (
+            f'<html>\n'
+            f'<head>\n'
+            f'<link rel="stylesheet" href="/static/CSS/output.css">\n'
+            f'</head>\n'
+            f'<body>\n'
+            f'<div class=my-output>\n'
+            f'<p>\n'
+            f'{output}\n'
+            f'</p>\n'            
+            f'</div>\n'
+            f'</body>\n'
+            f'</html>\n'
 
-        return output
+        )
+
+        return wrap
     except Exception as newe:
         neweput=color.BOLD+'ERROR :{} '.format(str(newe))+color.END
         return neweput
